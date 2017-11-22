@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 nov. 2017 18:26:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.travel.entities.Image" table="IMAGE" schema="TRAVEL" optimistic-lock="version">
+        <id name="idImage" type="int">
+            <column name="ID_IMAGE" />
+            <generator class="assigned" />
+        </id>
+        <property name="chemin" type="string">
+            <column name="CHEMIN" length="32700" />
+        </property>
+        <property name="offreId" type="java.lang.Integer">
+            <column name="OFFRE_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

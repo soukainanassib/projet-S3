@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 nov. 2017 18:26:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.travel.entities.Voyageur" table="VOYAGEUR" schema="TRAVEL" optimistic-lock="version">
+        <id name="idVoyageur" type="int">
+            <column name="ID_VOYAGEUR" />
+            <generator class="assigned" />
+        </id>
+        <property name="dateNaissance" type="date">
+            <column name="DATE_NAISSANCE" length="10" />
+        </property>
+        <property name="ville" type="string">
+            <column name="VILLE" length="50" />
+        </property>
+        <property name="tel" type="string">
+            <column name="TEL" length="50" />
+        </property>
+        <property name="job" type="string">
+            <column name="JOB" length="50" />
+        </property>
+        <property name="interet" type="string">
+            <column name="INTERET" length="32700" />
+        </property>
+        <property name="image" type="string">
+            <column name="IMAGE" length="100" />
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

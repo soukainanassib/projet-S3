@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 nov. 2017 18:26:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.travel.entities.Offrevoyage" table="OFFREVOYAGE" schema="TRAVEL" optimistic-lock="version">
+        <id name="idOffre" type="int">
+            <column name="ID_OFFRE" />
+            <generator class="assigned" />
+        </id>
+        <property name="titre" type="string">
+            <column name="TITRE" length="32700" />
+        </property>
+        <property name="plan" type="string">
+            <column name="PLAN" length="32700" />
+        </property>
+        <property name="dateDebut" type="date">
+            <column name="DATE_DEBUT" length="10" />
+        </property>
+        <property name="duree" type="java.lang.Integer">
+            <column name="DUREE" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="32700" />
+        </property>
+        <property name="destination" type="string">
+            <column name="DESTINATION" length="50" />
+        </property>
+        <property name="villeDepart" type="string">
+            <column name="VILLE_DEPART" length="50" />
+        </property>
+        <property name="voyageurId" type="java.lang.Integer">
+            <column name="VOYAGEUR_ID" />
+        </property>
+        <property name="typeId" type="java.lang.Integer">
+            <column name="TYPE_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

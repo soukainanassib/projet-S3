@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 nov. 2017 18:26:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.travel.entities.Administrateur" table="ADMINISTRATEUR" schema="TRAVEL" optimistic-lock="version">
+        <id name="idAdmin" type="int">
+            <column name="ID_ADMIN" />
+            <generator class="assigned" />
+        </id>
+        <property name="role" type="string">
+            <column name="ROLE" length="50" />
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="USER_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

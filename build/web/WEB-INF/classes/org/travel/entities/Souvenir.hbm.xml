@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 nov. 2017 18:26:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.travel.entities.Souvenir" table="SOUVENIR" schema="TRAVEL" optimistic-lock="version">
+        <id name="idSouvenir" type="int">
+            <column name="ID_SOUVENIR" />
+            <generator class="assigned" />
+        </id>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="32700" />
+        </property>
+        <property name="image" type="string">
+            <column name="IMAGE" length="60" />
+        </property>
+        <property name="voyageurId" type="java.lang.Integer">
+            <column name="VOYAGEUR_ID" />
+        </property>
+    </class>
+</hibernate-mapping>

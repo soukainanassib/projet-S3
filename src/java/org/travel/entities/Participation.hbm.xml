@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19 nov. 2017 18:26:40 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.travel.entities.Participation" table="PARTICIPATION" schema="TRAVEL" optimistic-lock="version">
+        <id name="idParticipation" type="int">
+            <column name="ID_PARTICIPATION" />
+            <generator class="assigned" />
+        </id>
+        <property name="message" type="string">
+            <column name="MESSAGE" length="32700" />
+        </property>
+        <property name="created" type="date">
+            <column name="CREATED" length="10" />
+        </property>
+        <property name="offreId" type="java.lang.Integer">
+            <column name="OFFRE_ID" />
+        </property>
+        <property name="voyageurId" type="java.lang.Integer">
+            <column name="VOYAGEUR_ID" />
+        </property>
+    </class>
+</hibernate-mapping>
